@@ -3,10 +3,13 @@
  * twitter: @MrDevinB
  */
 
-(function($) {
-  $.fn.nowidow = function() {
+(function(_) {
+  _.fn.nowidow = function() {
     return this.html(function() {
-      return $(this).html().replace(/\s([^\s]*)(\s+)?$/, '&nbsp;$1');
+      return _(this).html().replace(/\s([^\s]*)(\s+)?$/, '&nbsp;$1');
     });
   }
+  _(document).ready(function(){
+    _('.nowidow').nowidow();
+  })
 })(jQuery);
