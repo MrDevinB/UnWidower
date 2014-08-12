@@ -3,7 +3,7 @@
  * twitter: @MrDevinB
  */
 
-(function(_) {
+;(function(_) {
   _.fn.nowidow = function() {
     return this.html(function() {
       return _(this).html().replace(/\s([^\s]*)(\s+)?$/, '&nbsp;$1');
@@ -11,5 +11,5 @@
   }
   _(document).ready(function(){
     _('.nowidow').nowidow();
-  })
+  });
 })(jQuery);
